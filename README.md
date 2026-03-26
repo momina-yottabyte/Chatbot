@@ -23,26 +23,38 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+NestJS backend for an **HRMS help chatbot**. User questions are answered with **OpenAI** using context retrieved from Markdown files in the `dataset/` folder. **No Docker** and **no separate vector database** are required: embeddings are built in memory when the app starts.
 
 ## Project setup
 
 ```bash
-$ npm install
+cp .env.example .env
+# Set OPENAI_API_KEY in .env
+
+npm install
 ```
+
+Add or edit HRMS documentation as `.md` files under `dataset/` (for example `dataset/hrms-guide.md`). Restart the server after changing files so chunks are re-embedded.
 
 ## Compile and run the project
 
 ```bash
 # development
-$ npm run start
+npm run start
 
 # watch mode
-$ npm run start:dev
+npm run start:dev
 
 # production mode
-$ npm run start:prod
+npm run build && npm run start:prod
 ```
+
+### Chat API (Swagger / Postman / curl)
+
+- **Swagger UI**: `http://localhost:3000/api` (try **POST** `/chat` from the UI)
+- **POST** `http://localhost:3000/chat` (or your `PORT`)
+- **Body** (JSON): `{ "message": "How do I apply for leave?" }`
+- **Response**: `{ "response": "..." }`
 
 ## Run tests
 

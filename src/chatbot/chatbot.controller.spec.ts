@@ -1,5 +1,6 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { ChatbotController } from './chatbot.controller';
+import { ChatbotService } from './chatbot.service';
 
 describe('ChatbotController', () => {
   let controller: ChatbotController;
@@ -7,6 +8,14 @@ describe('ChatbotController', () => {
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
       controllers: [ChatbotController],
+      providers: [
+        {
+          provide: ChatbotService,
+          useValue: {
+            handleMessage: jest.fn().mockResolvedValue('ok'),
+          },
+        },
+      ],
     }).compile();
 
     controller = module.get<ChatbotController>(ChatbotController);
