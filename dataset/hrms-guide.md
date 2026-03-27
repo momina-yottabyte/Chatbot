@@ -1,6 +1,6 @@
 # HRMS User Guide
 
-## Leave Application
+<!-- ## Leave Application
 
 To apply for leave:
 
@@ -9,7 +9,7 @@ To apply for leave:
 - Click on "Apply Leave"
 - Select leave type (Casual, Sick, Annual)
 - Choose start and end date
-- Submit the request for approval
+- Submit the request for approval -->
 
 ## Attendance (Check-In / Check-Out)
 
@@ -23,7 +23,7 @@ Notes:
 - You can only check-in once per day
 - Late check-in may be marked as late attendance
 
-## Leave Policy
+<!-- ## Leave Policy
 
 - Employees are entitled to:
   - 12 Casual Leaves per year
@@ -34,7 +34,7 @@ Notes:
 ## Common Questions
 
 Q: How do I apply for leave?
-A: Go to the Leave section and click "Apply Leave".
+A: Go to the Leave section and click "Apply Leave". -->
 
 Q: How do I check in?
 A: Use the Check-In button on your dashboard.
