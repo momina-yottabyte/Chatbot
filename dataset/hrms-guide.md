@@ -1,6 +1,6 @@
 # HRMS User Guide
 
-  <!-- ## Leave Application
+## Leave Application
 
 To apply for leave:
 
@@ -9,7 +9,7 @@ To apply for leave:
 - Click on "Apply Leave"
 - Select leave type (Casual, Sick, Annual)
 - Choose start and end date
-- Submit the request for approvals   -->
+- Submit the request for approvals   
 
 ## Attendance (Check-In / Check-Out)
 
