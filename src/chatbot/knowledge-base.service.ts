@@ -64,7 +64,10 @@ export class KnowledgeBaseService implements OnModuleInit {
     const docs: Document[] = [];
     for (const file of files) {
       const full = path.join(datasetDir, file);
-      const text = fs.readFileSync(full, 'utf8');
+      // const text = fs.readFileSync(full, 'utf8');
+      // docs.push(...splitIntoChunks(text, file));
+      const rawText = fs.readFileSync(full, 'utf8');
+      const text = rawText.replace(/<!--[\s\S]*?-->/g, '');
       docs.push(...splitIntoChunks(text, file));
     }
 
