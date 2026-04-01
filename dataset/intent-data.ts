@@ -11,8 +11,7 @@ export const intents = [
       'how do I apply for leave?',
       'requesting time off',
     ],
-    // response: 'Sure! You can apply for leave in the Leave section of HRMS dashboard.',
-     response: 'Sure! ',
+     response: 'Sure! You can apply for leave in the Leave section of HRMS dashboard.',
   },
   {
     name: 'attendance_checkin',

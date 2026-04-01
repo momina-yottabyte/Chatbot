@@ -12,7 +12,7 @@ export class ChatbotService {
   private getOpenAI(): OpenAI {
     const apiKey = process.env.OPENAI_API_KEY;
     if (!apiKey) {
-      console.error('❌ OPENAI_API_KEY is NOT configured');
+      
       throw new ServiceUnavailableException('OPENAI_API_KEY is not configured');
     }
     if (!this.openaiClient) {
@@ -57,8 +57,8 @@ export class ChatbotService {
 
     const systemContent =
       context.trim().length > 0
-        ? `You are an HRMS product assistant. Answer using only the context below. If the answer is not in the context, say you do not have that information in the guide.\n\nContext:\n${context}`
-        : `You are an HRMS product assistant. No knowledge-base documents were loaded. Say you do not have the documentation loaded yet and suggest adding .md files under the dataset/ folder.`;
+        ? `You are an HRMS product assistant. Answer using only the context below. If the answer is not in the context, say you do not have that information in the HRMS guide.\n\nContext:\n${context}`
+        : `You are an HRMS product assistant. No knowledge-base documents were loaded. Say you do not have the documentation loaded and are suggested adding .md files under the dataset/ folder.`;
 
     const response = await this.getOpenAI().chat.completions.create({
       model,

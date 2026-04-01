@@ -70,7 +70,6 @@ export class KnowledgeBaseService implements OnModuleInit {
       const text = rawText.replace(/<!--[\s\S]*?-->/g, '');
       // docs.push(...splitIntoChunks(text, file));
       const chunks = splitIntoChunks(text, file);
-      this.logger.log(`Processed file: ${file}, chunks created: ${chunks.length}`);
       docs.push(...chunks);
     }
 
