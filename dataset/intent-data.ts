@@ -1,6 +1,6 @@
 export const intents = [
   {
-    name: 'greeting',
+    name: 'greetings',
     examples: ['hi', 'hello', 'hey', 'good morning'],
     response: 'Hello! How can I assist you with HRMS today?',
   },
