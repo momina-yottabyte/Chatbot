@@ -4,15 +4,17 @@ export const intents = [
     examples: ['hi', 'hello', 'hey', 'good morning'],
     response: 'Hello! How can I assist you with HRMS today?',
   },
-  {
-    name: 'leave_request',
-    examples: [
-      'I want to apply for leave',
-      'how do I apply for leave?',
-      'requesting time off',
-    ],
-     response: 'Sure! You can apply for leave in the Leave section of HRMS dashboard.',
-  },
+{
+  name: 'leave_request',
+  examples: [
+    'apply for leave',        // ← shorter core phrase catches more variations
+    'request leave',
+    'requesting time off',
+    'take leave',
+    'time off request',
+  ],
+  response: 'Sure! You can apply for leave in the Leave section of HRMS dashboard.',
+},
   {
     name: 'attendance_checkin',
     examples: [
