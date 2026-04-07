@@ -2,6 +2,7 @@ import { Test, TestingModule } from '@nestjs/testing';
 import { Document } from '@langchain/core/documents';
 import { ChatbotService } from './chatbot.service';
 import { KnowledgeBaseService } from './knowledge-base.service';
+import { describe, beforeEach, it } from 'node:test';
 
 describe('ChatbotService', () => {
   let service: ChatbotService;
