@@ -75,7 +75,7 @@ import { Injectable, ServiceUnavailableException, BadRequestException } from '@n
 import OpenAI from 'openai';
 import { KnowledgeBaseService } from './knowledge-base.service';
 import { GuardrailsService } from './guardrails.service';
-import { intents } from '../../dataset/intent-data';
+import { intents } from '../../dataset/intents/intent-data';
 
 @Injectable()
 export class ChatbotService {
@@ -149,3 +149,18 @@ export class ChatbotService {
     return this.guardrails.filterOutput(raw);
   }
 }
+
+/* 
+const synonymMap = {
+  "credentials": "password",
+  "login details": "password"
+};
+
+function normalize(text: string) {
+  Object.keys(synonymMap).forEach(key => {
+    text = text.replace(key, synonymMap[key]);
+  });
+  return text;
+}
+
+*/
